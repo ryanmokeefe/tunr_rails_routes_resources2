@@ -16,7 +16,7 @@ class ArtistsController < ApplicationController
     redirect_to artist_path(@artist)
   end
 
-  #show
+  #show - makes var accessible in show-view
   def show
     @artist = Artist.find(params[:id])
   end

@@ -1,6 +1,6 @@
 <h2>Edit Song</h2>
 
-<%= form_for @song do |f| %>
+<%= form_for [@artist, @song] do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
 
@@ -16,6 +16,6 @@
   <%= f.submit %>
 <% end %>
 
-<%= form_for @song, method: :delete do |f| %>
+<%= form_for [@artist, @song], method: :delete do |f| %>
   <%= f.submit "Delete!", class: "delete" %>
 <% end %>
